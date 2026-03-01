@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battle Arena - Top-Down Shooter Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fullscreen game canvas -->
+  <canvas id="game" aria-label="Battle Arena Game" role="img"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" class="hud" aria-live="polite">
+    <div class="hud-row">
+      <div class="stat"><span class="label">Score:</span> <span id="score">0</span></div>
+      <div class="stat"><span class="label">Wave:</span> <span id="wave">1</span></div>
+    </div>
+    <div class="hud-row">
+      <div class="health">
+        <span class="label">Health</span>
+        <div class="bar"><div id="healthBar" class="bar-inner" style="width: 100%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay Screens (menu/pause/game over) -->
+  <div id="overlay" class="overlay show">
+    <div class="panel">
+      <h1>Battle Arena</h1>
+      <p class="subtitle">Simple top-down shooter prototype</p>
+
+      <div class="instructions">
+        <h2>Controls</h2>
+        <ul>
+          <li>Move: W A S D</li>
+          <li>Aim: Mouse</li>
+          <li>Shoot: Left Click</li>
+          <li>Pause: Esc</li>
+        </ul>
+      </div>
+
+      <div class="panel-actions">
+        <button id="startBtn" class="btn primary">Start</button>
+      </div>
+
+      <div class="panel-footer">
+        <small>Prototype built with HTML5 Canvas, CSS and JavaScript.</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
